@@ -1,0 +1,22 @@
+name: Flutter APK Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.3.0'
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Build APK
+        run: flutter build apk --release --target-platform android-arm64
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: biology_apk
+          path: build/app/outputs/flutter-apk/app-release.apk

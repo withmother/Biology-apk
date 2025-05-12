@@ -1,0 +1,20 @@
+name: biology_app
+description: NEET UG Biology Prep with AI Notes and QBank
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.0
+  sqflite: ^2.0.0+3
+  path_provider: ^2.0.9
+  flutter_local_notifications: ^9.3.0
+  charts_flutter: ^0.12.0
+  flutter_markdown: ^0.6.10
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
